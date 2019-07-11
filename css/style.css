@@ -49,7 +49,8 @@ body{
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%);
+    text-align: center;
 }
 
 .heading-primary{
@@ -57,7 +58,8 @@ body{
     text-transform: uppercase;
 
     /*przeciwdiala wstrząsowi*/
-    backface-visibility: hidden
+    backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main{
@@ -110,4 +112,32 @@ body{
         transform: translate(0)
 
     }
+}
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    /*Element liniowy ale zachowuje się jako blok*/
+    display: inline-block;
+    border-radius: 100px;
+    /*Inny sposób obsługi animacji*/
+    transition: all .2s 
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
+
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777
 }
