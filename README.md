@@ -31,3 +31,8 @@ DEKLARACJE:
 - programisty, 
 - użytkownika,
 - przeglądarki
+
+Przetwarzanie w fazie analizy CSS
+
+font-size: 16px 
+font-size: (16px * 1.5 = 24px)
