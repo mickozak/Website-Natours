@@ -36,3 +36,18 @@ Przetwarzanie w fazie analizy CSS
 
 font-size: 16px 
 font-size: (16px * 1.5 = 24px)
+
+Istnieje rozróżnienie dla czcionek lub pomiarów długości lub odległości. 
+- czcionka 150 % = 24px (ponieważ podstawowa rozmiar czionki określany przez przeglądakę to 16px)
+- długość lub odległość - określana względem elementu ndarzędnego
+
+- em - element parent 3 em x 24px = 72px
+- em - element parent 2 em x 24px = 48px
+- rem - root jako referencja 10rem x 16px = 160px
+
+Możemy zbudować więcej responsywnych układów. Ponieważ wraz ze wzrostem czionki rosną iine wartości ponieważ ulegają pomnożeniu. 
+
+- vh
+- vw
+
+Dziedziczenie - propagowanie właściwości od rodziców do dzieci. 
