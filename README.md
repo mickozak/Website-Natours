@@ -97,3 +97,27 @@ POSITIONING
 KONTEKST STOSU
 
 - z-index - określa kolejność elementów w stosie, stosowany razem z position: relative/absolute.
+
+Zasady CSS: Clean, Modular, Reasable, Ready for growth
+
+Proces CSS:
+
+THINK -> BUILD -> ARCHITECT
+
+Staramy się dzielić naszą stronę na komponenty elementy modułowe. Komponenty powinny być wielokrotnego użytku tagże pomiędzy różnymi projektami. Komponenty muszą być nie zależne.
+
+BEM - Block Element Modifier
+
+Block to samodzielny komponent który można wykorzystać w dowolnym miejscu w projekcie.
+.block{}
+Element nie ma charakteru samodzielnego
+.block__element{}
+Modyfikator służy do stworzenia nowej wersji. Uszczegółowienie elementu.
+.block__element--modifier{}
+
+Architektura - The 7-1 Pattern
+7 różnych folderów, 1 główny Sass w którym importujemy wszystkie nasze częsci
+base, components, layout, pages, themes, abstract, vendors
+
+
+
