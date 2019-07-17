@@ -69,3 +69,31 @@ Resetowanie dla wszystkich elementów również pseudoelementów.
     padding: 0;
     box-sizing: inherit;
 }
+
+MODEL PUDEŁKOWY
+- margin
+- border
+- padding
+- content
+- width
+- height
+
+total width i total height obejmują wszystko oprócz marginesów.
+
+użycie box-sizing: border-box sktkuje wykorzystaniem tylko specified width: border, pading nie jest dodawany do wymiarów pudełka !!!
+
+BOX TYPES
+
+- Block-level boxes - display: block - 100% szerokości rodzica - jedna po drugiej
+- Inline boxes - display: inline - zajmują tyle przestrzeni ile potrzebują - możemy określać tylko poziomy pading i margin
+- Inline-block boxes - display: inline-block - wykorzystują swoją przestrzeń treści -
+
+POSITIONING
+
+- Normal flow - position: relative - default - ułożenie w naturalnym porządku kodu
+- Floats - float: left/right - element jest usuniety z naturalnego porządku i przesunięty w prawo lub lewo jak najdalej to mozliwe az dotknie krawędzi jego pudełka zawierającego lub innego elementu pływającego
+- Absolute positioning - position: absolute/fixed - element usuniety z porządku kodu - brak wpływu na otaczającą zawartość - może nakładać się na element zajmując tę samą przestrzeń
+
+KONTEKST STOSU
+
+- z-index - określa kolejność elementów w stosie, stosowany razem z position: relative/absolute.
