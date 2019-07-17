@@ -45,9 +45,27 @@ Istnieje rozróżnienie dla czcionek lub pomiarów długości lub odległości.
 - em - element parent 2 em x 24px = 48px
 - rem - root jako referencja 10rem x 16px = 160px
 
+em od rozmiaru elementu nadrzednego rem od rozmiaru trzcionki. Stosowanie rem ułatwia pisanie zapytań o media - wystarczy działanie na font-size.
+
+Czionkę główną ustawiamy na 62,5%. Ten rozmiar jest równy 10px ponieważ domyślny rozmiar czionki to 16px;
+
+Przy rozmarach 0.5rem - skracamy i piszemy .5rem
+
 Możemy zbudować więcej responsywnych układów. Ponieważ wraz ze wzrostem czionki rosną iine wartości ponieważ ulegają pomnożeniu. 
 
 - vh
 - vw
 
-Dziedziczenie - propagowanie właściwości od rodziców do dzieci. 
+Dziedziczenie - propagowanie właściwości od rodziców do dzieci.
+
+inherit - wymusza dziedziczenie
+
+Resetowanie dla wszystkich elementów również pseudoelementów. 
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
