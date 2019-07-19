@@ -119,5 +119,86 @@ Architektura - The 7-1 Pattern
 7 różnych folderów, 1 główny Sass w którym importujemy wszystkie nasze częsci
 base, components, layout, pages, themes, abstract, vendors
 
+SASS
+
+Jest ppreprocesorem CSS, dodaje dodatkowe funkcjonalności.
+SASS oferuje zmienne, zagnieżdzenia, operatory, import, mixins, funkcje, rozszerzenia, dyrektywy kontrolne
+
+Syntax sass i scss - pierwsza bez nawiasów, druga podobna do klasycznego css. 
+
+1. Variables
+
+$primary-color: #fdsads
+
+@mixin clearfix{
+    &::after{
+    content: "";
+    clear: both;
+    display: table
+}
+}
+
+nav{
+    color: $primary-color;
+    //Dodatek: Naprawa zwiniętego elementu w przypadku ustawienia float 
+    @include clearfix
+}
+
+2. Nested
+
+nav{
+    color: $primary-color;
+    ul{
+        list-style: none;
+        li{
+            margin: 30px;
+            &:first-child{
+                margin: 15px;
+            }
+        }
+    }
+    &:hover{
+        color: dark(&primary-color, 15%)
+    }
+}
+
+3. Mixin
+
+    @mixin name{
+
+    }
+
+    @include name
 
 
+Do mixin możemy przekazać argument.  
+@mixin name($col){
+    color: $col
+}
+a następnie odwołać się do niego 
+@include name($primary-color)
+
+4. Funkcje 
+
+Możemy tworzyć unckej
+@function margin($a, $b){
+    @return $a / $b
+}
+
+wykorzystanie
+
+nav{
+    margin: margin(60, 2) * 1px;
+}
+
+lub używać wbudownych dark($primary-color, 15%)
+
+5. Rozszerzenia
+
+%btn-placeholder{
+
+}
+
+wykorzystanie 
+
+@extend %btn-placeholder
