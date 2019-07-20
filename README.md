@@ -202,3 +202,12 @@ lub używać wbudownych dark($primary-color, 15%)
 wykorzystanie 
 
 @extend %btn-placeholder
+
+WIERSZ POLECEŃ 
+
+- npm init
+- instalujemy sass npm install node-sass --save-dev
+- "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+- npm run compile:sass

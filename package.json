@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "TRZY FILARY HTML&CSS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickozak/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mickozak/Natours/issues"
+  },
+  "homepage": "https://github.com/mickozak/Natours#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
