@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mickozak/Natours#readme",
   "dependencies": {
+    "live-server": "^1.2.1",
     "node-sass": "^4.12.0"
   }
 }
