@@ -211,3 +211,25 @@ WIERSZ POLECEŃ
     "compile:sass": "node-sass sass/main.scss css/style.css"
   },
 - npm run compile:sass
+
+PLIKI CZĘŚCIOWE 
+1. Base > _base.scss
+
+PROJEKTOWANIE RESPONSYWNE 
+- Fluid Grids and Layouts - używamy %
+- Responsnywne i elastyczne obrazy
+- Media Query
+
+LAYOUT TYPES 
+- Float Layouts
+- FlexBox
+- CSS Grid
+
+CENTROWANIE BLOKU WEWNĄTRZ INNEGO BLOKU
+margin: 0 auto;
+
+STANDARD SZEROKOŚCI > 1140PX
+
+ [class^="col-"] - wybieramy tylko te klasy kt ore zaczynają się od...
+ [class*="col-"] - wybieramy wszystkie...
+ [class$="col-"] - wszystkie kończą się...
