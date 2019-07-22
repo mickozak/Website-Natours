@@ -260,3 +260,11 @@ POCHYLENIE
 KLASY UTILITY 
 
 Są to klasy które mają jeden cel np.: wyśrodkować
+
+RESPONSYWNOŚĆ
+
+Wymiary procentów podajemy w %.
+
+OBRAMOWANIE
+
+Aby zrobić ładne obramowanie właściwość outline aby oddalić obramowanie outline-offset
