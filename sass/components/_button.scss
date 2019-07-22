@@ -9,6 +9,7 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
+        font-size: $default-font-size;
        
 
         //Change for the <button> element
@@ -73,6 +74,7 @@
 .btn-text {
     &:link,
     &:visited {
+        font-size: $default-font-size;
         color: $color-primary;
         display: inline-block;
         text-decoration: none;
