@@ -233,3 +233,30 @@ STANDARD SZEROKOŚCI > 1140PX
  [class^="col-"] - wybieramy tylko te klasy kt ore zaczynają się od...
  [class*="col-"] - wybieramy wszystkie...
  [class$="col-"] - wszystkie kończą się...
+
+ GRADIENT NA LITERACH
+ 
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    // Aby zmniejszyć kolor nie zajmował całej przestrzeni
+    display: inline-block;
+    // Aby uzyskać gradient liter ustawiamy kolor nagłówka
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    //Kolor zostaje ograniczony do liter 
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+POCHYLENIE
+
+&:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+KLASY UTILITY 
+
+Są to klasy które mają jeden cel np.: wyśrodkować
