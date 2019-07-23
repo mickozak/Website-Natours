@@ -268,3 +268,9 @@ Wymiary procentów podajemy w %.
 OBRAMOWANIE
 
 Aby zrobić ładne obramowanie właściwość outline aby oddalić obramowanie outline-offset
+
+SELEKTOR 
+
+& > * {
+        transform: skewY(7deg)
+    }

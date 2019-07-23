@@ -12,4 +12,11 @@
         rgba($color-primary-dark, 0.8)), 
         url(../img/nat-4.jpg);
         background-size: cover;
+    //Zamiast clip path którego można tutaj użyć, można też transform
+    transform: skewY(-7deg);
+    margin-top: -11rem;
+    //Zmieniamy pozycje features z powrotem 
+    & > * {
+        transform: skewY(7deg)
+    }
 }
