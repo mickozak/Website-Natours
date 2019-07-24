@@ -274,3 +274,12 @@ SELEKTOR
 & > * {
         transform: skewY(7deg)
     }
+
+PERSPEKTYWA
+
+Perspektywa musi być zdefiniowana na elemencie rodzica. 
+
+BACKFACE
+- stosowane przy kartach 
+
+backface-visibility: hidden;
