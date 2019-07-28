@@ -283,3 +283,7 @@ BACKFACE
 - stosowane przy kartach 
 
 backface-visibility: hidden;
+
+MIESZANIE OBRAZU Z GRADIENTEM
+
+
