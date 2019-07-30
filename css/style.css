@@ -339,7 +339,8 @@ body {
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -348,7 +349,11 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem); }
+    transform: translateX(-3rem) skewX(12deg); }
+  .story__image {
+    height: 100%; }
+  .story__text {
+    transform: skewX(12deg); }
 
 .row {
   max-width: 114rem;
