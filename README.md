@@ -287,3 +287,76 @@ backface-visibility: hidden;
 MIESZANIE OBRAZU Z GRADIENTEM
 
 
+
+RESPONSYWNOŚĆ
+
+Dwa podejście:
+1. First Desktop - w pierwszej koeljności projektujemy stronę na desktop a następnie mobile. Aby zmniejszyć stronę używamy zapytań o media.
+2. First Mobile - piszemy stronę dla mniejszych ekranów w pierwszej kolejności a następnie za pomocą zapytań o media dostospowujemy stronę do ekranu monitora. Zapytania o media (min-width).
+
+Punkty przerwania:
+- 0px - 600px
+- 600px - 900px
+- 900px - 1200px
+- 1200px - ...
+
+DESKTOP-FIRST
+max-width: 600px i max-width: 900 - ekran ma 500px będą obowiązywać dwa zapytania o 
+
+MOBILE-FIRST
+min-width: 600px
+
+PUNKTY PRZERWANIA:
+BAD: dostosowanie punktów przerwania do urządzeń typowych np. iphone
+GOOD: dostosować punkty przerwania do grup urządzeń
+PERFECT: ignorowanie urządzeń i patrzenie tylko i wyłącznie na content
+
+W ciekawy sposób szerokość ekranu pokazuje stat counter.
+Punkty przerwania dla: telefonów 0-600, tabletów portretowych 600 - 900/ krajobrazowych 900 - 1200, komputerów stacjonarnych 1200 -..., większych monitorów 1800 - ....
+
+###################
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em){
+            @content
+        }
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em){
+            @content
+        }
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em){
+            @content
+        }
+    }
+    @if $breakpoint == tab-desktop {
+        @media (min-width: 112.5em){
+            @content
+        }
+    }
+}
+
+###################
+
+###################
+
+html{
+    font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%
+    }
+    
+    @include respond(tab-port) {
+        font-size: 50%
+    }
+    
+    @include respond(tab-desktop) {
+        font-size: 75%
+    }
+}
+
+###################
