@@ -360,3 +360,23 @@ html{
 }
 
 ###################
+
+Responsywny obraz
+
+Ważne aby wielkość obrazu dostosować do urządzenia - komputera stacjonarnego lub laptopa.
+
+Trzy przypadki - użycie obrazów responsywnych:
+- przełączanie rozdzielczości 
+- przełączanie gęstości pikseli
+
+Dodajemy atrybut srcset do znacznika img oraz deskryptor gęstości.
+
+- kierunek sztuki
+
+Obrazy są dostosowane do szerokości ekranu. Stosujemy znaczniki 
+
+<picture>
+    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+            media="(max-width: 37.5em)">
+    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">
+</picture>
