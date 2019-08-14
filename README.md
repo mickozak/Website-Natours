@@ -366,7 +366,14 @@ Responsywny obraz
 Ważne aby wielkość obrazu dostosować do urządzenia - komputera stacjonarnego lub laptopa.
 
 Trzy przypadki - użycie obrazów responsywnych:
-- przełączanie rozdzielczości 
+- przełączanie rozdzielczości
+
+<img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+     sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+     alt="Photo 1"
+     class="composition__photo composition__photo--1"
+     src="img/nat-1-large.jpg">
+
 - przełączanie gęstości pikseli
 
 Dodajemy atrybut srcset do znacznika img oraz deskryptor gęstości.
