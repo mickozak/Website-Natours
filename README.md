@@ -374,6 +374,8 @@ Trzy przypadki - użycie obrazów responsywnych:
      class="composition__photo composition__photo--1"
      src="img/nat-1-large.jpg">
 
+     sizes określa widok w widoku jednostek szerokości portów dla różnych punktów przerwania
+
 - przełączanie gęstości pikseli
 
 Dodajemy atrybut srcset do znacznika img oraz deskryptor gęstości.
@@ -387,3 +389,5 @@ Obrazy są dostosowane do szerokości ekranu. Stosujemy znaczniki
             media="(max-width: 37.5em)">
     <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo">
 </picture>
+
+Oprócz znanych nam zapytań o media istnieją również inne np.:
