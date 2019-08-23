@@ -1,8 +1,9 @@
-.form{
-    &__group:not(:last-child){
+.form {
+    &__group:not(:last-child) {
         margin-bottom: 2rem;
     }
-    &__input{
+
+    &__input {
         font-size: 1.5rem;
         font-family: inherit;
         color: inherit;
@@ -15,26 +16,27 @@
         display: block;
         transition: all .3s;
 
-        @include respond(tab-port){
+        @include respond(tab-port) {
             width: 100%;
         }
 
-        &:focus{
+        &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
             border-bottom: 3px solid $color-primary;
         }
 
-        &:focus:invalid{
+        &:focus:invalid {
             border-bottom: 3px solid $color-secondary-dark;
         }
 
-        &::-webkit-input-placeholder{
+        &::-webkit-input-placeholder {
             color: $color-grey-dark-2;
         }
     }
 
-    &__label{
+
+    &__label {
         font-size: 1.2rem;
         font-weight: 700;
         margin-left: 2rem;
@@ -43,27 +45,27 @@
         transition: all .3s;
     }
 
-    &__input:placeholder-shown + &__label{
+    &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-4rem)
+        transform: translateY(-4rem);
     }
+
 
     &__radio-group {
         width: 49%;
         display: inline-block;
 
-        @include respond(tab-port){
+        @include respond(tab-port) {
             width: 100%;
             margin-bottom: 2rem;
         }
     }
 
-    &__radio-input{
+    &__radio-input {
         display: none;
-
     }
-
+    
     &__radio-label {
         font-size: $default-font-size;
         cursor: pointer;
@@ -71,7 +73,7 @@
         padding-left: 4.5rem;
     }
 
-    &__radio-button{
+    &__radio-button {
         height: 3rem;
         width: 3rem;
         border: 5px solid $color-primary;
@@ -81,7 +83,7 @@
         left: 0;
         top: -.4rem;
 
-        &::after{
+        &::after {
             content: "";
             display: block;
             height: 1.3rem;
@@ -93,12 +95,11 @@
             transform: translate(-50%, -50%);
             background-color: $color-primary;
             opacity: 0;
-            transition: opacity .2;
-            
+            transition: opacity .2s;
         }
     }
-    //wybrać rodzeństwo a potem dziecko
-    &__radio-input:checked ~ &__radio-label &__radio-button::after{
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
         opacity: 1;
     }
 }

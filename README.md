@@ -404,3 +404,32 @@ backdrop-filter - właściwość css która pozawala rozmyć tło.
 
 -webkit-backdrop-filter: blur(10px);
 backdrop-filter: blur(10px);
+
+PROCES BUDOWANIA
+
+Proces budowania to sekwencja zadań, które wykonujemy automatycznie po ukończeniu opracowania produktu lub określonej cechy produktu. Rezultatem jest jeden lub więcej plików końcowych. Proces scalania plików nazywamy konkatynacją.
+
+COMPILATION -> CONCATENATION -> PREFIXING -> COMPRESSING
+
+W etapie concat używamy:
+npm install concat --save-dev
+
+W etapie prefixing używamy:
+npm install autoprefixer --save-dev
+npm install postcss-cli --save-dev
+
+Na zakończenie:
+npm install npm-run-all --save-dev
+
+...
+"scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  ...

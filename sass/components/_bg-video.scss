@@ -1,4 +1,4 @@
-.bg-video{
+.bg-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -8,10 +8,9 @@
     opacity: .15;
     overflow: hidden;
 
-    &__content{
+    &__content {
         height: 100%;
         width: 100%;
-        //ustawia object  - obejmowanie obiektu nadrzędnego
         object-fit: cover;
     }
 }

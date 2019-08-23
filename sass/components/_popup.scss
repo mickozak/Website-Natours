@@ -1,4 +1,4 @@
-.popup{
+.popup {
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -10,27 +10,75 @@
     visibility: hidden;
     transition: all .3s;
 
-    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         background-color: rgba($color-black, .3);
     }
 
-    //targetem jest popup, open states
+    &__content {
+        @include absCenter;
+
+        width: 75%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .5s .2s;
+    }
+
+    &__left {
+        width: 33.333333%;
+        display: table-cell;
+    }
+
+    &__right {
+        width: 66.6666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem; //1em = 14px;
+        -moz-column-rule: 1px solid $color-grey-light-2;
+
+        column-count: 2;
+        column-gap: 4rem; //1em = 14px;
+        column-rule: 1px solid $color-grey-light-2;
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    //Open states
     &:target {
         opacity: 1;
         visibility: visible;
     }
 
-
-    &:target &__content{
+    &:target &__content {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1)
+        transform: translate(-50%, -50%) scale(1);
     }
 
     &__close {
         &:link,
-        &:visited{
+        &:visited {
             color: $color-grey-dark;
             position: absolute;
             top: 2.5rem;
@@ -42,55 +90,8 @@
             line-height: 1;
         }
 
-        &:hover{
+        &:hover {
             color: $color-primary;
         }
-    }
-
-    &__content {
-        @include absCenter;
-        width: 75%;
-        background-color: $color-white;
-        box-shadow: 0 2rem 4rem rgba($color-black, .2);
-        border-radius: 3px;
-        display: table;
-        overflow: hidden;
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.25);
-        transition: all .4s .2s;
-    }
-
-    &__left{
-        width: 33.333333%;
-        display: table-cell;
-    }
-
-    &__right{
-        width: 66.666667%;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 3rem 5rem;
-    }
-
-    &__img{
-        display: block;
-        width: 100%;
-    }
-
-    &__text{
-        font-size: 1.4rem;
-        margin-bottom: 4rem;
-        //dzielenie na kolumny
-        -moz-column-count: 2;
-        -moz-column-gap: 4rem;
-        -moz-column-rule: 1px solid $color-grey-light-2;
-        column-count: 2;
-        column-gap: 4rem;
-        column-rule: 1px solid $color-grey-light-2;
-        //dzieli wyraz
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
     }
 }

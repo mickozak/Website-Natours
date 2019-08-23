@@ -1,27 +1,25 @@
-.story{
+.story {
     width: 75%;
-    margin:0 auto;
-    box-shadow:  0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .6S);
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
-    //Ustawianie kontenera w figurę rąb
     transform: skewX(-12deg);
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
         width: 100%;
         padding: 4rem;
         padding-left: 7rem;
     }
 
-    
-    @include respond(phone){
+    @include respond(phone) {
         transform: skewX(0);
     }
 
-    &__shape{
+    &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
@@ -30,7 +28,7 @@
         overflow: hidden;
         border-radius: 50%;
 
-        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
             -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
             -webkit-shape-outside: circle(50% at 50% 50%);
@@ -38,27 +36,27 @@
             border-radius: none;
         }
 
-        @include respond(phone){
+        @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
         }
     }
 
-    &__image {
+    &__img {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
         transition: all .5s;
     }
 
-    &__text{
+    &__text {
         transform: skewX(12deg);
 
-        @include respond(phone){
+        @include respond(phone) {
             transform: skewX(0);
         }
     }
 
-    &__caption{
+    &__caption {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -74,10 +72,11 @@
 
     &:hover &__caption {
         opacity: 1;
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%);
     }
-    &:hover &__image{
+
+    &:hover &__img {
         transform: translateX(-4rem) scale(1);
-        filter: blur(3px) brightness(80%)
+        filter: blur(3px) brightness(80%);
     }
 }
