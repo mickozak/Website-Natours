@@ -391,3 +391,16 @@ Obrazy są dostosowane do szerokości ekranu. Stosujemy znaczniki
 </picture>
 
 Oprócz znanych nam zapytań o media istnieją również inne np.:
+
+@supports (zapytanie o funkcje) -  składa się z deklaracji CSS (klucz-para). Do wykorzstania mamy także warunkowość zdań: koniunkcję, alternatywę oraz negację. Określamy co chcemy zrobić gdy dana funkcja jest obsługiwana.
+
+@supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+
+backdrop-filter - właściwość css która pozawala rozmyć tło.
+
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
