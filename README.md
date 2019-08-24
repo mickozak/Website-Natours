@@ -10,4 +10,4 @@ Used.:
 - CSS,
 - SASS.
 
-Link.: https://mickozak.github.io/Website-ArfaStudio/
+Link.: https://mickozak.github.io/Natours/
