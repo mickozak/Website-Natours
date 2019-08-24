@@ -1,8 +1,6 @@
 # Natours
 
-Website built on the basis of material from the course:
-* Advanced CSS and Sass: Flexbox, Grid, Animations and More!
-* Jonas Schmedtmann
+Website built on the basis of material from the course "Advanced CSS and Sass: Flexbox, Grid, Animations and More!".
 
 Used.:
 
